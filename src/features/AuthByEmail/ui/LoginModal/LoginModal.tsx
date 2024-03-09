@@ -1,6 +1,7 @@
 import { classNames } from 'shared/aliases';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { LoginForm } from 'features/AuthByEmail';
+import { useState } from 'react';
 import cls from './LoginModal.module.scss';
 
 interface LoginModalProps {
@@ -8,9 +9,17 @@ interface LoginModalProps {
 }
 export const LoginModal = (props:LoginModalProps) => {
     const { className } = props;
+    const [opened, setOpened] = useState(false);
     return (
-        <Modal className={classNames(cls.LoginModal, {}, [className])}>
-            <LoginForm />
-        </Modal>
+        <>
+            <button onClick={() => setOpened(!opened)}>summon modal</button>
+            <Modal
+                isOpen={opened}
+                onClose={() => setOpened(false)}
+                className={classNames(cls.LoginModal, {}, [className])}
+            >
+                <LoginForm />
+            </Modal>
+        </>
     );
 };
