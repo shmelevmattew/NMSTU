@@ -24,9 +24,7 @@ export const Modal:FC<ModalProps> = (props) => {
     };
 
     const closeHandler = useCallback(() => {
-        if (onClose) {
-            console.log('TODO');
-        }
+
     }, [onClose]);
     return (
         <Portal>

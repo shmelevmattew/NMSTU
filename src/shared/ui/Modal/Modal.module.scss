@@ -4,14 +4,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
 }
 .opened{
   pointer-events: auto;
-  opacity: 1;
-  z-index: 0;
 }
 .overlay{
   width: 100%;
@@ -22,12 +17,10 @@
   justify-content: center;
 }
 .content{
-  border-radius: var(--modal-border-radius);
+  border-radius: var(--border-radius-L);
   background-color: var(--modal-background-color);
   position: relative;
-  border: 1px solid black;
-  width: 800px;
-  height: 600px;
+  padding: 40px;
   display: flex;
   flex-direction:column;
   align-items: center;

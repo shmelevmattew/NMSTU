@@ -40,6 +40,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'react/button-has-type': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'i18next/no-literal-string': [
             'warn',
             {

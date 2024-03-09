@@ -12,11 +12,14 @@
 
   // Border
   --border-radius-L: 40px;
-  --border-radius-M: 8px ;
+  --border-radius-M: 16px ;
+  --border-radius-S: 8px ;
 
   // Для модалки
   --modal-overlay-background-color: rgba(0,0,0,0.4);
-  --modal-border-radius: var(--border-radius-L);
   --modal-background-color: #ffff;
+
+  // Для инпута
+  --input-background-color: #7D7D7D;
 
 }
