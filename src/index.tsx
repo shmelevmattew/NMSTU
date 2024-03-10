@@ -18,3 +18,5 @@ root.render(
         </ErrorBoundary>
     </ThemeProvider>,
 );
+
+// Удалю комментарий после проверки
