@@ -6,7 +6,7 @@ interface PageErrorProps {
     className?:string
 }
 export const PageError = ({ className }:PageErrorProps) => {
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation('error');
     const reloadPage = () => {
         // eslint-disable-next-line no-restricted-globals
         location.reload();
