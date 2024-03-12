@@ -12,7 +12,14 @@ const App = (): ReactElement => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
     useEffect(() => {
-    }, []);
+        import(`../../public/locales/${i18n.language}/about.json`).then(about => {
+            i18n.addResourceBundle(i18n.language, 'about', about);
+        });
+        import(`../../public/locales/${i18n.language}/main.json`).then(main => {
+            i18n.addResourceBundle(i18n.language, 'main', main);
+        });
+
+    }, [i18n.language]);
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense>
