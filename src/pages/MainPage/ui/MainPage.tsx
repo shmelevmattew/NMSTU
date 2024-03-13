@@ -5,7 +5,7 @@ const MainPage = () => {
     const { t, i18n } = useTranslation('main');
 
     useEffect(() => {
-        import(`../../../../public/locales/${i18n.language}/main.json`).then(main => {
+        import(`../../../../public/locales/${i18n.language}/main.json`).then((main) => {
             i18n.addResourceBundle(i18n.language, 'main', main);
         });
     }, [i18n.language]);

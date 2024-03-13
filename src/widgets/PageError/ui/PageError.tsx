@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { classNames } from 'shared/aliases';
 import { useTranslation } from 'react-i18next';
 import cls from './PageError.module.scss';
@@ -10,7 +10,7 @@ export const PageError = ({ className }:PageErrorProps) => {
     const { t, i18n } = useTranslation('error');
 
     useEffect(() => {
-        import(`../../../../public/locales/${i18n.language}/error.json`).then(error => {
+        import(`../../../../public/locales/${i18n.language}/error.json`).then((error) => {
             i18n.addResourceBundle(i18n.language, 'error', error);
         });
     }, [i18n.language]);

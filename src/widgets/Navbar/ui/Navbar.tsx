@@ -1,6 +1,6 @@
 import { classNames } from 'shared/aliases/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/ui/AppLink';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import cls from './Navbar.module.scss';
 
@@ -11,7 +11,7 @@ export const Navbar = ({ className }:NavbarProps) => {
     const { t, i18n } = useTranslation('navbar');
 
     useEffect(() => {
-        import(`../../../../public/locales/${i18n.language}/navbar.json`).then(navbar => {
+        import(`../../../../public/locales/${i18n.language}/navbar.json`).then((navbar) => {
             i18n.addResourceBundle(i18n.language, 'navbar', navbar);
         });
     }, [i18n.language]);
