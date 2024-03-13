@@ -1,17 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "shared/ui/Button/ui/Button";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
-import cls from "./Button.module.scss";
-import { ButtonTheme } from "shared/ui/Button/ui/Button";
-import { CategoryVariants } from "shared/ui/Button/ui/Button";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonTheme, CategoryVariants } from 'shared/ui/Button/ui/Button';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import cls from './Button.module.scss';
 
 const meta = {
-    title: "shared/Button",
+    title: 'shared/Button',
     component: Button,
     argTypes: {},
     parameters: {
-        layout: "centered",
+        layout: 'centered',
     },
 } satisfies Meta<typeof Button>;
 
@@ -21,21 +19,21 @@ type Story = StoryObj<typeof meta>;
 export const Light: Story = {
     args: {
         className: cls.Button,
-        children: "Press me",
+        children: 'Press me',
     },
     decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 export const Dark: Story = {
     args: {
         className: cls.Button,
-        children: "Press me",
+        children: 'Press me',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 export const AllCategories: Story = {
     args: {
         className: cls.Button,
-        children: "Все",
+        children: 'Все',
         theme: ButtonTheme.PRIMARY,
         category: CategoryVariants.ALL_CATEGORIES,
     },
@@ -43,7 +41,7 @@ export const AllCategories: Story = {
 export const NewsCategory: Story = {
     args: {
         className: cls.Button,
-        children: "Новости",
+        children: 'Новости',
         theme: ButtonTheme.PRIMARY,
         category: CategoryVariants.NEWS_CATEGORY,
     },
@@ -51,7 +49,7 @@ export const NewsCategory: Story = {
 export const TeacherCategory: Story = {
     args: {
         className: cls.Button,
-        children: "Преподаватели",
+        children: 'Преподаватели',
         theme: ButtonTheme.PRIMARY,
         category: CategoryVariants.TEACHER_CATEGORY,
     },
@@ -59,7 +57,7 @@ export const TeacherCategory: Story = {
 export const HelpCategory: Story = {
     args: {
         className: cls.Button,
-        children: "Помощь с заданиями",
+        children: 'Помощь с заданиями',
         theme: ButtonTheme.PRIMARY,
         category: CategoryVariants.HELP_CATEGORY,
     },

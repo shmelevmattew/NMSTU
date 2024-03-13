@@ -31,7 +31,7 @@ export const Button = (props: ButtonProps) => {
         className,
         children,
         isSelected = false,
-        category,
+        category = 'default',
         theme = ButtonTheme.PRIMARY,
         disabled = false,
         icon,
@@ -50,7 +50,7 @@ export const Button = (props: ButtonProps) => {
                 className={classNames(cls.Button, mods, [
                     className,
                     cls[theme],
-                    category ? cls[category] : cls.default,
+                    cls[category],
                     // icon ? `pi pi-${icon}` : '',
                     isSelected ? cls['Button-selected'] : '',
                 ])}
