@@ -1,31 +1,10 @@
 .Modal{
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  inset: 0;
   pointer-events: none;
   opacity: 0;
 }
 
-.opened{
-  opacity: 1;
-  pointer-events: auto;
-  display: block;
-  transition: 0.3s;
-  .content{
-    transform: scale(1);
-  }
-}
-.closing{
-  .content{
-    transform: scale(0.3);
-  }
-  .overlay{
-    opacity: 0;
-    transition: 0.3s opacity;
-  }
-}
 .overlay{
   width: 100%;
   height: 100%;
@@ -34,6 +13,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .content{
   border-radius: var(--border-radius-L);
   background-color: var(--modal-background-color);
@@ -46,6 +26,29 @@
   transition: 0.2s transform;
   transform: scale(0.3);
 }
+
+.opened{
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+  transition: 0.3s;
+
+  .content{
+    transform: scale(1);
+  }
+}
+
+.closing{
+  .content{
+    transform: scale(0.3);
+  }
+
+  .overlay{
+    opacity: 0;
+    transition: 0.3s opacity;
+  }
+}
+
 .iconClose{
   position: absolute;
   right: 20px;

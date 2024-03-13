@@ -17,6 +17,7 @@ export const Modal:FC<ModalProps> = (props) => {
         children,
         isOpen,
         onClose,
+        ...otherProps
     } = props;
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
@@ -61,7 +62,7 @@ export const Modal:FC<ModalProps> = (props) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className])} {...otherProps}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={classNames(cls.content)} onClick={onContentClick}>
                         <div onClick={closeHandler}>

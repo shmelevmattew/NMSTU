@@ -5,5 +5,8 @@
   "Main": "Main",
   "MPageD": "Main page description",
   "Error": "Whoops...Something went wrong...",
-  "ErrorButton": "Обновить страницу"
+  "ErrorButton": "Обновить страницу",
+  "Sign in": "Sign in",
+  "Login": "Login",
+  "Password": "Password"
 }
