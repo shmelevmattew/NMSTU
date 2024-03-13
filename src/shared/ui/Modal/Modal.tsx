@@ -1,9 +1,10 @@
 import { classNames } from 'shared/aliases';
 import React, {
-    FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
+    FC, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
+import 'app/styles/index.scss';
 
 interface ModalProps{
     className?:string,
@@ -23,6 +24,7 @@ export const Modal:FC<ModalProps> = (props) => {
     const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
     const [isClosing, setIsClosing] = useState(false);
     const ANIMATION_DELAY = 300;
+    const appRef = document.querySelector('.app');
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -61,7 +63,7 @@ export const Modal:FC<ModalProps> = (props) => {
     }, [isOpen, onKeyDown]);
 
     return (
-        <Portal>
+        <Portal element={appRef as HTMLElement}>
             <div className={classNames(cls.Modal, mods, [className])} {...otherProps}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={classNames(cls.content)} onClick={onContentClick}>
