@@ -17,6 +17,7 @@ export enum ButtonTheme {
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     className?: string;
+    styles?: Object;
     children?: ReactNode;
     isSelected?: boolean;
     category?: CategoryVariants;
@@ -30,6 +31,7 @@ export const Button = (props: ButtonProps) => {
     const {
         className,
         children,
+        styles = {},
         isSelected = false,
         category = 'default',
         theme = ButtonTheme.PRIMARY,
@@ -43,36 +45,35 @@ export const Button = (props: ButtonProps) => {
         [cls.disabled]: disabled,
     };
     return (
-        <div>
-            <button
-                onClick={(e) => clickEvent(e)}
-                disabled={disabled}
-                className={classNames(cls.Button, mods, [
-                    className,
-                    cls[theme],
-                    cls[category],
-                    // icon ? `pi pi-${icon}` : '',
-                    isSelected ? cls['Button-selected'] : '',
-                ])}
-            >
-                {icon
-                    ? !iconEnd && (
-                        <span
-                            className={`pi pi-${icon}`}
-                            style={{ marginRight: '5px' }}
-                        />
-                    )
-                    : null}
-                {children}
-                {icon
-                    ? iconEnd && (
-                        <span
-                            className={`pi pi-${icon}`}
-                            style={{ marginLeft: '5px' }}
-                        />
-                    )
-                    : null}
-            </button>
-        </div>
+        <button
+            onClick={(e) => clickEvent(e)}
+            disabled={disabled}
+            style={styles}
+            className={classNames(cls.Button, mods, [
+                className,
+                cls[theme],
+                cls[category],
+                // icon ? `pi pi-${icon}` : '',
+                isSelected ? cls['Button-selected'] : '',
+            ])}
+        >
+            {icon
+                ? !iconEnd && (
+                    <span
+                        className={`pi pi-${icon}`}
+                        style={{ marginRight: '5px' }}
+                    />
+                )
+                : null}
+            {children}
+            {icon
+                ? iconEnd && (
+                    <span
+                        className={`pi pi-${icon}`}
+                        style={{ marginLeft: '5px' }}
+                    />
+                )
+                : null}
+        </button>
     );
 };
