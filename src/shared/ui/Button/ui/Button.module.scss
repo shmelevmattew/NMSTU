@@ -7,41 +7,55 @@
     border-radius: var(--radius);
     cursor: pointer;
 }
+
 .Button.outline {
     color: var(--primary-color);
+
     --btn-bg-color: transparent;
+
     border: var(--btn-outline-thickness) solid var(--primary-color);
     border-radius: calc(var(--radius) * 3);
 }
+
 .Button.outline:hover {
     opacity: 0.8;
 }
-.Button:not(.Button-selected):not(.disabled):hover {
+
+.Button:not(.Button-selected, .disabled):hover {
     background-color: color-mix(in srgb, var(--btn-bg-color) 80%, transparent);
 }
+
 .Button-selected {
     background-color: var(--btn-bg-color);
+
     --primary-color: #000;
 }
+
 .all-categories {
     --btn-bg-color: #90bee9;
 }
+
 .news-category {
     --btn-bg-color: #9de990;
 }
+
 .teacher-category {
     --btn-bg-color: #e9c090;
 }
+
 .help-category {
     --btn-bg-color: #db90e9;
 }
+
 .Button.disabled {
     opacity: 0.8;
     cursor: default;
 }
+
 .Button.default {
     background-color: var(--btn-bg-color);
 }
+
 .Button.no-backgound {
     --btn-bg-color: transparent;
 }
