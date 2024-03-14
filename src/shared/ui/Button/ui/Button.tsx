@@ -23,7 +23,7 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     theme?: ButtonTheme;
     icon?: string;
     iconEnd?: boolean;
-    clickEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    clickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     disabled?: boolean;
 }
 export const Button = (props: ButtonProps) => {
@@ -43,36 +43,34 @@ export const Button = (props: ButtonProps) => {
         [cls.disabled]: disabled,
     };
     return (
-        <div>
-            <button
-                onClick={(e) => clickEvent(e)}
-                disabled={disabled}
-                className={classNames(cls.Button, mods, [
-                    className,
-                    cls[theme],
-                    cls[category],
-                    // icon ? `pi pi-${icon}` : '',
-                    isSelected ? cls['Button-selected'] : '',
-                ])}
-            >
-                {icon
-                    ? !iconEnd && (
-                        <span
-                            className={`pi pi-${icon}`}
-                            style={{ marginRight: '5px' }}
-                        />
-                    )
-                    : null}
-                {children}
-                {icon
-                    ? iconEnd && (
-                        <span
-                            className={`pi pi-${icon}`}
-                            style={{ marginLeft: '5px' }}
-                        />
-                    )
-                    : null}
-            </button>
-        </div>
+        <button
+            onClick={(e) => clickEvent(e)}
+            disabled={disabled}
+            className={classNames(cls.Button, mods, [
+                className,
+                cls[theme],
+                cls[category],
+                // icon ? `pi pi-${icon}` : '',
+                isSelected ? cls['Button-selected'] : '',
+            ])}
+        >
+            {icon
+                ? !iconEnd && (
+                    <span
+                        className={`pi pi-${icon}`}
+                        style={{ marginRight: '5px' }}
+                    />
+                )
+                : null}
+            {children}
+            {icon
+                ? iconEnd && (
+                    <span
+                        className={`pi pi-${icon}`}
+                        style={{ marginLeft: '5px' }}
+                    />
+                )
+                : null}
+        </button>
     );
 };

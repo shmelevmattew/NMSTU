@@ -1,9 +1,9 @@
 name: Unit + UI Testing
 on:
   push:
-    branches: [ master , Development]
+    branches: [ master , CoreDevelop]
   pull_request:
-    branches: [ master , Development]
+    branches: [ master , CoreDevelop]
 jobs:
   unit-ui-testing:
     runs-on: ubuntu-latest
