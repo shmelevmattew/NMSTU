@@ -10,8 +10,6 @@ const AboutPage = () => {
             {t('About page')}
             <Button
                 theme={ButtonTheme.OUTLINE}
-                clickEvent={(e) => {
-                }}
             >
                 валуе
             </Button>
