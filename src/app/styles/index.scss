@@ -1,11 +1,13 @@
-@import "reset";
-@import "./themes/dark";
-@import "./themes/light";
-@import "./variables/global";
-
-.app{
-  font:var(--font-m);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
+@import 'reset';
+@import 'primeicons/primeicons.css';
+@import './themes/dark';
+@import './themes/light';
+@import './variables/global';
+body{
+    font: var(--font-m);
+    color: var(--primary-color);
+}
+.app {
+    min-height: 100vh;
+    background: var(--bg-color);
 }

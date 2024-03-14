@@ -1,11 +1,19 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button, ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { LoginModal } from 'features/AuthByEmail';
 
 const AboutPage = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <div>
             {t('About page')}
+            <Button
+                theme={ButtonTheme.OUTLINE}
+            >
+                валуе
+            </Button>
+            <LoginModal />
         </div>
     );
 };

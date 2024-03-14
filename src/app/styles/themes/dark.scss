@@ -1,8 +1,11 @@
-.app.dark {
-  --bg-color-body: #2D2A4C;
-  --color-primary: #574FA6;
-  --color-seconadry: #CCC8F4;
-  --color-text: #000;
-  --border-color-toggle: #FFF;
-  --border-color-language: #FFF;
+.app.dark{
+  --bg-color: #585858;
+  --primary-color: #fff;
+  --secondary-color: #cecece;
+
+  --primary-link-color: #792222;
+  --secondary-link-color: #ce6a6a;
+  --btn-bg-color: #574FA6;
+  --modal-background-color:#ffffff;
+  --gray-text-color:#A0A0A0;
 }

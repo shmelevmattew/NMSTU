@@ -1,12 +1,16 @@
-:root {
-  --bg-color-category-news-active: #9CE990;
-  --bg-color-category-news-inactive: #9CE99080;
-  --bg-color-category-teachers-active: #E9C090;
-  --bg-color-category-teachers-inactive: #E9C09080;
-  --bg-color-category-help-active: #DB90E9;
-  --bg-color-category-help-inactive: #DB90E980;
-  --bg-color-search: #FFF;
-  --border-color-create-post: #B0C0FF;
-  --border-color-search: #B0C0FF;
-  --border-color-input: #515151;
+:root{
+  --font-family-main:"Times New Roman",serif;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) / var(--font-family-main);
+  --font-size-l: 24px;
+  --font-line-L: 32px;
+  --font-l: var(--font-size-l) / var(--font-line-l) / var(--font-family-main);
+  --spacing: 8px;
+  --border-radus-S: 9px;
+  --border-radus-M: 16px;
+  --border-radus-L: 40px;
+  --btn-outline-thickness: 1px;
+  --overlay-background-color:rgba(0,0,0,0.4);
 }
+

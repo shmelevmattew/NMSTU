@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const MainPage = () => {
+const AboutPage = () => {
     const { t } = useTranslation();
     return (
         <div>
-            {t('MPageD')}
+            11 11
         </div>
     );
 };
 
-export default MainPage;
+export default AboutPage;
