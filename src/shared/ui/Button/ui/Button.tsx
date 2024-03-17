@@ -47,7 +47,6 @@ export const Button:FC<ButtonProps> = (props) => {
                 className,
                 cls[theme],
                 cls[category],
-                // icon ? `pi pi-${icon}` : '',
                 isSelected ? cls['Button-selected'] : '',
             ])}
             {...otherProps}
