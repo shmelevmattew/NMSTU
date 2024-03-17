@@ -1,7 +1,6 @@
 .Check {
     position: absolute;
 	appearance: none;
-    -webkit-appearance: none;
 }
 
 .Check::before {
@@ -15,7 +14,7 @@
 }
 
 .Check:checked::before {
-    font-family: 'primeicons';
+    font-family: primeicons;
     color: white;
     content: '\e909';
     background-color: #6323CB;
