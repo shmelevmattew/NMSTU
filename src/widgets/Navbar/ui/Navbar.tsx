@@ -3,6 +3,7 @@ import { AppLink } from 'shared/ui/AppLink/ui/AppLink';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme, CategoryVariants } from 'shared/ui/Button/ui/Button';
+import ToggleSwitch from 'shared/ui/ToggleSwitch/ToggleSwitch';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { useDispatch, useSelector } from 'react-redux';
 import { MenuItem } from 'widgets/Navbar/model/types/menuSchema';
@@ -57,14 +58,10 @@ export const Navbar = ({ className }:NavbarProps) => {
                     ))
                 }
             </div>
-            <Button
-                theme={ButtonTheme.OUTLINE}
-                onClick={() => {
-                    toggleTheme();
-                }}
-            >
-                click
-            </Button>
+            <ToggleSwitch
+                checked={theme === 'dark'}
+                onChange={toggleTheme}
+            />
             <Button
                 theme={ButtonTheme.OUTLINE}
                 onClick={() => {
