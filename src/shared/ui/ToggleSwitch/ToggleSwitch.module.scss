@@ -1,7 +1,7 @@
 .ToggleSwitch {
     position: relative;
     display: inline-block;
-    width: 42px;
+    width: 40px;
     height: 20px;
 }
 
@@ -18,10 +18,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:transparent;
+    background-color:var(--bg-color);
     -webkit-transition: .4s;
     transition: .4s;
-    border: var(--btn-outline-thickness) solid var(--primary-color);
     border-radius: var(--border-radus-L);
 }
 
@@ -31,11 +30,19 @@
     height: 16px;
     width: 16px;
     left: 2px;
-    bottom: 1px;
-    background-color: black;
+    bottom: 2px;
+    background-color: var(--btn-bg-color);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
+}
+
+input:checked + .ToggleSlider {
+    background-color: var(--bg-color); 
+}
+
+input:focus + .ToggleSlider {
+    box-shadow: 0 0 1px var(--bg-color); 
 }
 
 input:checked + .ToggleSlider:before {
