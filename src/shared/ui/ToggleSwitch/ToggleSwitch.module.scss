@@ -18,10 +18,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color:var(--bg-color);
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 34px;
+    border-radius: var(--border-radus-L);
 }
 
 .ToggleSlider:before {
@@ -31,18 +31,18 @@
     width: 16px;
     left: 2px;
     bottom: 2px;
-    background-color: white;
+    background-color: var(--btn-bg-color);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
 }
 
 input:checked + .ToggleSlider {
-    background-color: #2196F3;
+    background-color: var(--bg-color); 
 }
 
 input:focus + .ToggleSlider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px var(--bg-color); 
 }
 
 input:checked + .ToggleSlider:before {
