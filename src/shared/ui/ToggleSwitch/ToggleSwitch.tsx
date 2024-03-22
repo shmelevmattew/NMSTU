@@ -6,17 +6,16 @@ interface ToggleSwitchProps {
     onChange: () => void;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ checked, onChange }) => {
-    return (
-        <label className={csl.toggleSwitch}>
-            <input
-                type="checkbox"
-                checked={checked}
-                onChange={onChange}
-            />
-            <span className={csl.ToggleSlider}></span>
-        </label>
-    );
-};
+const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ checked, onChange }) => (
+    <label className={csl.ToggleSwitch} htmlFor="toggleSwitch">
+        <input
+            type="checkbox"
+            id="toggleSwitch"
+            checked={checked}
+            onChange={onChange}
+        />
+        <span className={csl.ToggleSlider} />
+    </label>
+);
 
 export default ToggleSwitch;
