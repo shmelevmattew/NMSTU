@@ -1,0 +1,25 @@
+.Comment{
+  display: flex;
+  color: var(--black);
+  position: relative;
+  gap: 16px;
+}
+//Временный класс пока отсутсвует компонент UserIcon
+.IconPlaceholder{
+  width: 42px;
+  height: 42px;
+  background-color: var(--gray-text-color);
+  border-radius: var(--border-circle);
+}
+.TextSection{
+  display: flex;
+  flex-direction: column;
+}
+.Reply{
+  color: var(--gray-text-color);
+  padding: 0;
+  width: 100px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

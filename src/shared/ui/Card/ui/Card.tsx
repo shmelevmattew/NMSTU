@@ -9,10 +9,8 @@ interface CardProps {
 export const Card:FC<CardProps> = (props) => {
     const { className, children } = props;
     return (
-        <div className={cls.overlay}>
-            <div className={classNames(cls.Card, {}, [className])}>
-                {children}
-            </div>
+        <div className={classNames(cls.Card, {}, [className])}>
+            {children}
         </div>
     );
 };
