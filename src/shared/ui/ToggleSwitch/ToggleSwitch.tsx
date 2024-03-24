@@ -16,7 +16,9 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ checked, onChange, theme })
             onChange={onChange}
         />
         <span className={csl.ToggleSlider} />
-        {theme === 'light' ? <i className="pi pi-sun" /> : <i className="pi pi-moon" />}
+        <div className={csl.toggle__div} style={{ left: checked ? '20px' : '2px' }}>
+            {theme === 'light' ? <i className="pi pi-sun" /> : <i className="pi pi-moon" />}
+        </div>
     </label>
 );
 
