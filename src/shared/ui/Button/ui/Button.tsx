@@ -17,6 +17,7 @@ export enum ButtonTheme {
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     className?: string;
+    styles?: Object;
     children?: ReactNode;
     isSelected?: boolean;
     category?: CategoryVariants;
@@ -29,6 +30,7 @@ export const Button:FC<ButtonProps> = (props) => {
     const {
         className,
         children,
+        styles = {},
         isSelected = false,
         category = 'default',
         theme = ButtonTheme.PRIMARY,
