@@ -4,7 +4,7 @@
     border: none;
     outline: none;
     padding: var(--spacing);
-    border-radius: var(--radius);
+    border-radius: var(--border-radus-S);
     cursor: pointer;
 }
 
@@ -14,7 +14,7 @@
     --btn-bg-color: transparent;
 
     border: var(--btn-outline-thickness) solid var(--primary-color);
-    border-radius: calc(var(--radius) * 3);
+    border-radius: var(--border-radus-L);
 }
 
 .Button.outline:hover {

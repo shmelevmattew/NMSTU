@@ -6,11 +6,7 @@ import { Button } from './Button';
 describe('Button', () => {
     test('Button to be in document', () => {
         renderWithTranslation(
-            <Button
-                clickEvent={(e) => {
-                    console.log(e);
-                }}
-            >
+            <Button>
                 TEST
             </Button>,
         );

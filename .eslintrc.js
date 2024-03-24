@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
+        'plugin:react-hooks/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -40,6 +41,11 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'react/button-has-type': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
+        'no-param-reassign': 'warn',
         'i18next/no-literal-string': [
             'warn',
             {

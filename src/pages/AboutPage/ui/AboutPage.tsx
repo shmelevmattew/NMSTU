@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { LoginModal } from 'features/AuthByEmail';
 
 const AboutPage = () => {
     const { t } = useTranslation();
@@ -9,12 +10,10 @@ const AboutPage = () => {
             {t('About page')}
             <Button
                 theme={ButtonTheme.OUTLINE}
-                clickEvent={(e) => {
-                    console.log(e);
-                }}
             >
                 валуе
             </Button>
+            <LoginModal />
         </div>
     );
 };

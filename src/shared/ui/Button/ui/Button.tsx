@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { classNames } from 'shared/aliases';
 import cls from './Button.module.scss';
 
@@ -15,7 +15,7 @@ export enum ButtonTheme {
     NO_BG = 'no-backgound',
 }
 
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     className?: string;
     styles?: Object;
     children?: ReactNode;
@@ -24,10 +24,9 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     theme?: ButtonTheme;
     icon?: string;
     iconEnd?: boolean;
-    clickEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
     disabled?: boolean;
 }
-export const Button = (props: ButtonProps) => {
+export const Button:FC<ButtonProps> = (props) => {
     const {
         className,
         children,
@@ -38,7 +37,6 @@ export const Button = (props: ButtonProps) => {
         disabled = false,
         icon,
         iconEnd = false,
-        clickEvent,
         ...otherProps
     } = props;
     const mods: Record<string, boolean> = {
@@ -46,16 +44,14 @@ export const Button = (props: ButtonProps) => {
     };
     return (
         <button
-            onClick={(e) => clickEvent(e)}
             disabled={disabled}
-            style={styles}
             className={classNames(cls.Button, mods, [
                 className,
                 cls[theme],
                 cls[category],
-                // icon ? `pi pi-${icon}` : '',
                 isSelected ? cls['Button-selected'] : '',
             ])}
+            {...otherProps}
         >
             {icon
                 ? !iconEnd && (
