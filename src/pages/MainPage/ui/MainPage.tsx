@@ -7,7 +7,7 @@ const MainPage = () => {
     const { t } = useTranslation();
     return (
         <div className={cls.align}>
-            <Post />
+            <Post className={cls.TestPost} />
         </div>
     );
 };

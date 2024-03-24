@@ -1,11 +1,14 @@
 .Post{
+  overflow: hidden;
 }
 .PostContent{
   display: flex;
 }
 .ContentSection{
   width: 55%;
+  height: 100%;
 }
 .CommentSection{
   width: 45%;
+  height: 100%;
 }
