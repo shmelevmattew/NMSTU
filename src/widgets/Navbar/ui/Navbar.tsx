@@ -61,6 +61,7 @@ export const Navbar = ({ className }:NavbarProps) => {
             <ToggleSwitch
                 checked={theme === 'dark'}
                 onChange={toggleTheme}
+                theme={theme}
             />
             <Button
                 theme={ButtonTheme.OUTLINE}
