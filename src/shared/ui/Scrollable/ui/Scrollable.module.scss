@@ -1,10 +1,27 @@
+//Сейчас там большая запара по скроллам у гугла от 121 версии по-моему скроллбары как на мозилле ,
+// поэтому то что в scrollable для новых хромов и гугла
 .Scrollable{
   overflow:auto;
   height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color)  var(--secondary-color)
 }
 .ScrollableX{
   overflow-x: scroll;
 }
 .ScrollableY{
   overflow-Y:scroll;
+}
+// Для всех остальных браузеров
+*::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+*::-webkit-scrollbar-thumb {
+  background-color:  var(--secondary-color);
+  border-radius: 5px;
+  border: 3px solid  var(--primary-color);
 }

@@ -31,6 +31,10 @@
     --primary-color: #000;
 }
 
+.Button-selected:hover {
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.166);
+}
+
 .all-categories {
     --btn-bg-color: #90bee9;
 }

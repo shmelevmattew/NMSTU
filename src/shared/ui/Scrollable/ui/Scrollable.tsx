@@ -12,8 +12,8 @@ export const Scrollable:FC<ScrollableProps> = (props) => {
     const {
         className,
         children,
-        axisX = true,
-        axisY = false,
+        axisX = false,
+        axisY = true,
     } = props;
 
     const mods:Record<string, boolean> = {

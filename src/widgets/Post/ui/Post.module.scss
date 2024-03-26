@@ -1,14 +1,25 @@
 .Post{
   overflow: hidden;
+  border-radius: var(--border-radus-S);
 }
 .PostContent{
   display: flex;
 }
 .ContentSection{
+  border-radius: var(--border-radus-M) 0 0 var(--border-radus-M);
   width: 55%;
   height: 100%;
+  background-color: gray;
+  position: relative;
 }
 .CommentSection{
+  padding: 36px 70px 0 36px;
   width: 45%;
   height: 100%;
+}
+.ContentHeader{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100px;
 }

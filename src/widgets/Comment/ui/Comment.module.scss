@@ -1,8 +1,10 @@
 .Comment{
   display: flex;
   color: var(--black);
+  align-items: center;
   position: relative;
   gap: 16px;
+  padding: 8px 0;
 }
 //Временный класс пока отсутсвует компонент UserIcon
 .IconPlaceholder{
@@ -10,10 +12,16 @@
   height: 42px;
   background-color: var(--gray-text-color);
   border-radius: var(--border-circle);
+  flex-basis: 42px;
 }
 .TextSection{
   display: flex;
   flex-direction: column;
+  font-size: var(--font-m);
+  flex-basis: 80%;
+}
+.UserName{
+  font-weight: bolder;
 }
 .Reply{
   color: var(--gray-text-color);

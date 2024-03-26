@@ -18,7 +18,7 @@ export const Comment = (props:CommentProps) => {
                     <span className={cls.UserName}>{user}</span>
                     <span className={cls.Content}>{content}</span>
                 </div>
-                <Button theme={ButtonTheme.NO_BG} className={cls.Reply} icon="pi pi-reply" iconEnd>Ответить</Button>
+                <Button theme={ButtonTheme.NO_BG} className={cls.Reply} icon="pi pi-reply" iconEnd>ответить</Button>
 
             </div>
             <Divider />

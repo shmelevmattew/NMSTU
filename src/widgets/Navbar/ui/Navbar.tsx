@@ -1,13 +1,15 @@
 import { classNames } from 'shared/aliases/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/ui/AppLink';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { Button, ButtonTheme, CategoryVariants } from 'shared/ui/Button/ui/Button';
+import ToggleSwitch from 'shared/ui/ToggleSwitch/ToggleSwitch';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { useDispatch, useSelector } from 'react-redux';
 import { MenuItem } from 'widgets/Navbar/model/types/menuSchema';
 import { getSelectedMenuListValue } from 'widgets/Navbar/model/selector/getSelectedMenuValue/getSelectedMenuValue';
 import { getMenuListValue } from 'widgets/Navbar/model/selector/getMenuListValue/getMenuListValue';
+import { getMenuList } from 'widgets/Navbar';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { menuActions } from '../model/slice/menuSlice';
 
@@ -56,14 +58,11 @@ export const Navbar = ({ className }:NavbarProps) => {
                     ))
                 }
             </div>
-            <Button
-                theme={ButtonTheme.OUTLINE}
-                onClick={() => {
-                    toggleTheme();
-                }}
-            >
-                click
-            </Button>
+            <ToggleSwitch
+                checked={theme === 'dark'}
+                onChange={toggleTheme}
+                theme={theme}
+            />
             <Button
                 theme={ButtonTheme.OUTLINE}
                 onClick={() => {
@@ -71,9 +70,6 @@ export const Navbar = ({ className }:NavbarProps) => {
                 }}
             >
                 {t('Translate')}
-            </Button>
-            <Button theme={ButtonTheme.OUTLINE}>
-                <i className="pi pi-wifi" />
             </Button>
         </div>
     );
