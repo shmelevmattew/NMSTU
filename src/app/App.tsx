@@ -4,7 +4,7 @@ import { classNames } from 'shared/aliases/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import 'app/styles/index.scss';
-import { UserImage } from 'shared/ui/UserImage/UserImage';
+import { UserImage, CategoryVariants } from 'shared/assets/UserImage/UserImage';
 
 const App = (): ReactElement => {
     const { theme } = useTheme();
@@ -13,7 +13,10 @@ const App = (): ReactElement => {
             <Suspense>
                 <Navbar />
                 <AppRouter />
-                <UserImage imageUrl="context.png" altText="image" />
+                <UserImage
+                    imageUrl="context.png"
+                    category={CategoryVariants.SMALL__IMAGE}
+                />
             </Suspense>
         </div>
     );

@@ -1,8 +1,16 @@
 .Wrapper {
-  width: 184px;
-  height: 184px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.BigImage {
+  width: 184px;
+  height: 184px;
+}
+
+.SmallImage {
+  width: 64px;
+  height: 64px;
 }
 
 .Image {
