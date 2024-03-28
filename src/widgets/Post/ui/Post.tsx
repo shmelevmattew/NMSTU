@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Card } from 'shared/ui/Card/ui/Card';
 import Image from 'shared/assets/bgPlaceholder.png';
 import { Comment } from 'widgets/Comment/ui/Comment';

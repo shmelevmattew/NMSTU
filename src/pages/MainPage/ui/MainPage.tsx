@@ -8,6 +8,7 @@ const MainPage = () => {
     return (
         <div className={cls.align}>
             <Post className={cls.TestPost} />
+            <Post className={cls.TestPost} />
         </div>
     );
 };

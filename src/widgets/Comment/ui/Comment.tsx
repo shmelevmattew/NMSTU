@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Divider } from 'shared/ui/Divider/ui/Divider';
 import { Button, ButtonTheme } from 'shared/ui/Button/ui/Button';
 import cls from './Comment.module.scss';

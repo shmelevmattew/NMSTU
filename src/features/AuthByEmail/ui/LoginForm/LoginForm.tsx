@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Input } from 'shared/ui/Input/ui/Input';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/ui/Button';

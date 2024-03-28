@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Check.module.scss';
 
 interface CheckProps extends React.HTMLAttributes<HTMLInputElement> {

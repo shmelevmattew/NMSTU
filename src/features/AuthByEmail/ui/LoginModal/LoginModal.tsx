@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { LoginForm } from 'features/AuthByEmail';
 import { useState } from 'react';

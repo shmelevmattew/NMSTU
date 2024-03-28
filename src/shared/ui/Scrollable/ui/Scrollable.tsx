@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, ReactNode } from 'react';
 import cls from './Scrollable.module.scss';
 

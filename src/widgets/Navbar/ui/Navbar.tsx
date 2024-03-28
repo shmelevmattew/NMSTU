@@ -1,4 +1,4 @@
-import { classNames } from 'shared/aliases/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/ui/AppLink';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
